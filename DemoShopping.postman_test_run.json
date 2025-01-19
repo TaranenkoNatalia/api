@@ -1,0 +1,907 @@
+{
+	"id": "a52698d5-5a85-4125-a5f8-9187d3ad8fa7",
+	"name": "DemoShopping",
+	"timestamp": "2025-01-19T17:38:28.690Z",
+	"collection_id": "39719611-e745646a-0f39-4664-9435-1aa0195358c1",
+	"folder_id": 0,
+	"environment_id": "39719611-0fe1a957-1207-4a48-84eb-82c02d6226d8",
+	"totalPass": 85,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-01-19T17:38:26.280Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "1e266c70-2c19-45d8-bcdf-dedd025e8990",
+			"name": "200-Возвращает список всех продуктов",
+			"url": "/products",
+			"time": 35,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Active environment - QA server": true,
+				"Verify Content-Type is application/json": true,
+				"Check response is an array": true,
+				"Verify that all values are correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Active environment - QA server": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify Content-Type is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check response is an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that all values are correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				35
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Active environment - QA server": true,
+					"Verify Content-Type is application/json": true,
+					"Check response is an array": true,
+					"Verify that all values are correct": true
+				}
+			]
+		},
+		{
+			"id": "8d1539c0-7886-4200-bc0b-8633ba65ffbe",
+			"name": "200-Добавление нового продукта",
+			"url": "https://qa.demoshopping.ru/add-product",
+			"time": 315,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request body has correct structure": true,
+				"Verify request data types": true,
+				"Status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Active environment - QA server": true,
+				"Response is HTML": true,
+				"Response contains product ID": true
+			},
+			"testPassFailCounts": {
+				"Request body has correct structure": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify request data types": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Active environment - QA server": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is HTML": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains product ID": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				315
+			],
+			"allTests": [
+				{
+					"Request body has correct structure": true,
+					"Verify request data types": true,
+					"Status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Active environment - QA server": true,
+					"Response is HTML": true,
+					"Response contains product ID": true
+				}
+			]
+		},
+		{
+			"id": "71ece549-b8f2-443d-8197-cd775887a9c1",
+			"name": "400-Добавление нового продукта с неверным типом данных в price",
+			"url": "https://qa.demoshopping.ru/add-product",
+			"time": 15,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Request body has correct structure": true,
+				"Status code is 400": true,
+				"Response time is less than 500ms": true,
+				"Active environment - QA server": true,
+				"Response is HTML": true,
+				"Response contains error message": true
+			},
+			"testPassFailCounts": {
+				"Request body has correct structure": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Active environment - QA server": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is HTML": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Request body has correct structure": true,
+					"Status code is 400": true,
+					"Response time is less than 500ms": true,
+					"Active environment - QA server": true,
+					"Response is HTML": true,
+					"Response contains error message": true
+				}
+			]
+		},
+		{
+			"id": "7743949d-c7e6-42e8-b9db-e4f6c1c33489",
+			"name": "200-Поиск товара по существующему ID",
+			"url": "https://qa.demoshopping.ru/products/id/19124",
+			"time": 19,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Active environment - QA server": true,
+				"Response has correct structure": true,
+				"Verify that all values are correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Active environment - QA server": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has correct structure": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that all values are correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				19
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Active environment - QA server": true,
+					"Response has correct structure": true,
+					"Verify that all values are correct": true
+				}
+			]
+		},
+		{
+			"id": "736b768d-52b0-4df5-a95a-2bf88c9b6a09",
+			"name": "404-Поиск товара по несуществующему ID",
+			"url": "https://qa.demoshopping.ru/products/id/10006",
+			"time": 19,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Response time is less than 500ms": true,
+				"Active environment - QA server": true,
+				"Response is HTML": true,
+				"Response contains error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Active environment - QA server": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is HTML": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				19
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Response time is less than 500ms": true,
+					"Active environment - QA server": true,
+					"Response is HTML": true,
+					"Response contains error message": true
+				}
+			]
+		},
+		{
+			"id": "6ffbe5a7-eb44-40e0-8fe8-8395a364e1a1",
+			"name": "200-Удаление товара по существующему ID",
+			"url": "https://qa.demoshopping.ru/products/id/19124",
+			"time": 44,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Active environment - QA server": true,
+				"Response is HTML": true,
+				"Response contains success message": true,
+				"DELETE request should be successful": true,
+				"Product should be deleted and return 404": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Active environment - QA server": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is HTML": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains success message": {
+					"pass": 1,
+					"fail": 0
+				},
+				"DELETE request should be successful": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Product should be deleted and return 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Active environment - QA server": true,
+					"Response is HTML": true,
+					"Response contains success message": true,
+					"DELETE request should be successful": true,
+					"Product should be deleted and return 404": true
+				}
+			]
+		},
+		{
+			"id": "c0bfea6b-f8f9-4ee3-8117-0bfd5c174ca7",
+			"name": "(pre-req) Добавление нового продукта",
+			"url": "https://qa.demoshopping.ru/add-product",
+			"time": 26,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Active environment - QA server": true,
+				"Response is HTML": true,
+				"Response contains product ID": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Active environment - QA server": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is HTML": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains product ID": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				26
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Active environment - QA server": true,
+					"Response is HTML": true,
+					"Response contains product ID": true
+				}
+			]
+		},
+		{
+			"id": "0f081daf-ffe5-4738-a55e-98b52966aa6d",
+			"name": "403-Удаление товара запрещено",
+			"url": "https://qa.demoshopping.ru/products/id/1",
+			"time": 15,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Status code is 403": true,
+				"Response time is less than 500ms": true,
+				"Active environment - QA server": true,
+				"Response is HTML": true,
+				"Response contains success message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 403": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Active environment - QA server": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is HTML": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains success message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Status code is 403": true,
+					"Response time is less than 500ms": true,
+					"Active environment - QA server": true,
+					"Response is HTML": true,
+					"Response contains success message": true
+				}
+			]
+		},
+		{
+			"id": "62050317-47ae-452f-a22c-0d8894205262",
+			"name": "404-Удаление товара по несуществующему ID",
+			"url": "https://qa.demoshopping.ru/products/id/10006",
+			"time": 17,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Response time is less than 500ms": true,
+				"Active environment - QA server": true,
+				"Response is HTML": true,
+				"Response contains success message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Active environment - QA server": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is HTML": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains success message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Response time is less than 500ms": true,
+					"Active environment - QA server": true,
+					"Response is HTML": true,
+					"Response contains success message": true
+				}
+			]
+		},
+		{
+			"id": "f526c15e-fcdb-4139-9130-f8152cc2daaf",
+			"name": "200-Полное обновление товара по ID",
+			"url": "https://qa.demoshopping.ru/products/id/19125",
+			"time": 41,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Request has correct structure": true,
+				"Verify that all values in request body are correct": true,
+				"Status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Active environment - QA server": true,
+				"Response is HTML": true,
+				"Response contains success message": true
+			},
+			"testPassFailCounts": {
+				"Request has correct structure": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that all values in request body are correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Active environment - QA server": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is HTML": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains success message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				41
+			],
+			"allTests": [
+				{
+					"Request has correct structure": true,
+					"Verify that all values in request body are correct": true,
+					"Status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Active environment - QA server": true,
+					"Response is HTML": true,
+					"Response contains success message": true
+				}
+			]
+		},
+		{
+			"id": "ea3f152f-9a11-4f86-938b-9b49f1bcd361",
+			"name": "400-Полное обновление товара по ID без данных о категории",
+			"url": "https://qa.demoshopping.ru/products/id/19125",
+			"time": 273,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Response time is less than 500ms": true,
+				"Active environment - QA server": true,
+				"Response is HTML": true,
+				"Response contains error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Active environment - QA server": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is HTML": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				273
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Response time is less than 500ms": true,
+					"Active environment - QA server": true,
+					"Response is HTML": true,
+					"Response contains error message": true
+				}
+			]
+		},
+		{
+			"id": "bd1dd4d7-2727-4852-ab43-99feb94853fb",
+			"name": "404-Полное обновление товара по несуществующему ID",
+			"url": "https://qa.demoshopping.ru/products/id/10006",
+			"time": 19,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Response time is less than 500ms": true,
+				"Active environment - QA server": true,
+				"Response is HTML": true,
+				"Response contains error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Active environment - QA server": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is HTML": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				19
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Response time is less than 500ms": true,
+					"Active environment - QA server": true,
+					"Response is HTML": true,
+					"Response contains error message": true
+				}
+			]
+		},
+		{
+			"id": "144f2b77-342b-4b75-8a78-d27b1425ccda",
+			"name": "200-Частичное обновление товара по ID",
+			"url": "https://qa.demoshopping.ru/products/id/19125",
+			"time": 29,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify that all values in request body are correct": true,
+				"Status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Active environment - QA server": true,
+				"Response is HTML": true,
+				"Response contains success message": true
+			},
+			"testPassFailCounts": {
+				"Verify that all values in request body are correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Active environment - QA server": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is HTML": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains success message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				29
+			],
+			"allTests": [
+				{
+					"Verify that all values in request body are correct": true,
+					"Status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Active environment - QA server": true,
+					"Response is HTML": true,
+					"Response contains success message": true
+				}
+			]
+		},
+		{
+			"id": "0cddad69-4e34-4c8a-83d5-81bea41c03a9",
+			"name": "400-Частичное обновление товара по ID с неверным форматом ID",
+			"url": "https://qa.demoshopping.ru/products/id/test?",
+			"time": 16,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Verify that all values in request body are correct": true,
+				"Status code is 400": true,
+				"Response time is less than 500ms": true,
+				"Active environment - QA server": true,
+				"Response is HTML": true,
+				"Response contains success message": true
+			},
+			"testPassFailCounts": {
+				"Verify that all values in request body are correct": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Active environment - QA server": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is HTML": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains success message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				16
+			],
+			"allTests": [
+				{
+					"Verify that all values in request body are correct": true,
+					"Status code is 400": true,
+					"Response time is less than 500ms": true,
+					"Active environment - QA server": true,
+					"Response is HTML": true,
+					"Response contains success message": true
+				}
+			]
+		},
+		{
+			"id": "2bca4b26-fe8e-481b-afc9-81b240af1913",
+			"name": "404-Частичное обновление товара по несуществующему ID",
+			"url": "https://qa.demoshopping.ru/products/id/10006",
+			"time": 18,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Response time is less than 500ms": true,
+				"Active environment - QA server": true,
+				"Response is HTML": true,
+				"Response contains success message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Active environment - QA server": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is HTML": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains success message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				18
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Response time is less than 500ms": true,
+					"Active environment - QA server": true,
+					"Response is HTML": true,
+					"Response contains success message": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 901,
+	"collection": {
+		"requests": [
+			{
+				"id": "1e266c70-2c19-45d8-bcdf-dedd025e8990",
+				"method": "GET"
+			},
+			{
+				"id": "8d1539c0-7886-4200-bc0b-8633ba65ffbe",
+				"method": "POST"
+			},
+			{
+				"id": "71ece549-b8f2-443d-8197-cd775887a9c1",
+				"method": "POST"
+			},
+			{
+				"id": "7743949d-c7e6-42e8-b9db-e4f6c1c33489",
+				"method": "GET"
+			},
+			{
+				"id": "736b768d-52b0-4df5-a95a-2bf88c9b6a09",
+				"method": "GET"
+			},
+			{
+				"id": "6ffbe5a7-eb44-40e0-8fe8-8395a364e1a1",
+				"method": "DELETE"
+			},
+			{
+				"id": "c0bfea6b-f8f9-4ee3-8117-0bfd5c174ca7",
+				"method": "POST"
+			},
+			{
+				"id": "0f081daf-ffe5-4738-a55e-98b52966aa6d",
+				"method": "DELETE"
+			},
+			{
+				"id": "62050317-47ae-452f-a22c-0d8894205262",
+				"method": "DELETE"
+			},
+			{
+				"id": "f526c15e-fcdb-4139-9130-f8152cc2daaf",
+				"method": "PUT"
+			},
+			{
+				"id": "ea3f152f-9a11-4f86-938b-9b49f1bcd361",
+				"method": "PUT"
+			},
+			{
+				"id": "bd1dd4d7-2727-4852-ab43-99feb94853fb",
+				"method": "PUT"
+			},
+			{
+				"id": "144f2b77-342b-4b75-8a78-d27b1425ccda",
+				"method": "PATCH"
+			},
+			{
+				"id": "0cddad69-4e34-4c8a-83d5-81bea41c03a9",
+				"method": "PATCH"
+			},
+			{
+				"id": "2bca4b26-fe8e-481b-afc9-81b240af1913",
+				"method": "PATCH"
+			}
+		]
+	}
+}
